@@ -1,0 +1,143 @@
+/* Modal Overlay */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Modal Content */
+.modalContent {
+  background: var(--background-color); /* Use theme variable */
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%; /* Adjusted for better mobile view */
+  max-width: 1000px;
+  max-height: 90vh;
+  overflow-y: auto; /* Scrollable content */
+  position: relative;
+}
+
+/* Close Button */
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--btn-color); /* Use theme variable for close button color */
+}
+
+/* Sections */
+.section {
+  margin-bottom: 30px;
+}
+
+/* Modal Title and Description */
+.modalTitle {
+  font-size: 24px;
+  color: var(--text-color); /* Use theme variable for text color */
+  margin-bottom: 10px;
+}
+
+.modalDescription {
+  text-align: start;
+  font-size: 16px;
+  color: var(--text-color); /* Use theme variable for text color */
+  margin-bottom: 20px;
+  padding-left: 20px; 
+}
+
+.carousel::-webkit-scrollbar {
+  display: none; /* Hides scrollbar */
+}
+/* Horizontal Carousel */
+.carousel {
+  width: 100%;
+  display: flex;
+  overflow-x: auto; /* Allow horizontal scrolling */
+  padding: 10px 0; /* Add some vertical padding */
+}
+
+/* Carousel Item */
+.carouselItem {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+/* Carousel Item Image */
+.carouselItem img {
+  width: 100%; /* Make image responsive */
+  max-width: 500px; /* Set a max width for larger screens */
+  height: 350px; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure the image covers the area */
+  border-radius: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+/* Hover Effect for Images */
+.carouselItem img:hover {
+  transform: scale(1.05); /* Add a slight hover effect */
+}
+
+/* Video Container */
+.videoContainer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.videoContainer video {
+  width: 100%;
+  max-width: 700px; /* Set a max width for the video */
+  height: auto;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .modalTitle {
+    font-size: 20px; /* Smaller title on mobile */
+  }
+
+  .modalDescription {
+    font-size: 14px; /* Smaller description on mobile */
+  }
+
+  .carouselItem img {
+    max-width: 100%; /* Full width for mobile */
+    
+  }
+
+  .closeButton {
+    font-size: 20px; /* Smaller close button */
+  }
+}
+
+@media (max-width: 480px) {
+  .modalContent {
+    padding: 15px; /* Less padding on mobile */
+  }
+
+  .modalTitle {
+    font-size: 18px; /* Even smaller title on very small screens */
+  }
+
+  .modalDescription {
+    font-size: 12px; /* Even smaller description on very small screens */
+  }
+
+  .closeButton {
+    font-size: 18px; /* Smaller close button */
+  }
+}
