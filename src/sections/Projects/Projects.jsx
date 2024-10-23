@@ -51,7 +51,7 @@ function Projects() {
   const ENVvid2 = '/assets/ImgAsma/EnvArt/inv11.mp4'
 
   //Concept
-  const con1 = '/assets/ImgAsma/ConceptArt/Ak1.png'
+  const con1 = '/assets/ImgAsma/ConceptArt/AK1.png'
   const con2 = '/assets/ImgAsma/ConceptArt/GLO1.png'
   const con3 = '/assets/ImgAsma/ConceptArt/GA1.png'
   const con4 = '/assets/ImgAsma/ConceptArt/D1.png'
