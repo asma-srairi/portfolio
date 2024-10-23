@@ -14,7 +14,7 @@ function Hero() {
   const facebookDark = '/assets/Facebook-dark.svg';
   const linkedinLight = '/assets/linkedin-light.svg';
   const linkedinDark = '/assets/linkedin-dark.svg';
-  const CV = new URL('../../assets/ImgAsma/AsmaSrairi_resume.pdf', import.meta.url).href;
+  const CV = new URL('../../assets/ImgAsma/AsmaSrairi_Resume.pdf', import.meta.url).href;
 
   const themeIcon = theme === 'light' ? sun : moon;
   const InstagramIcon = theme === 'light' ? InstagramLight : InstagramDark;
