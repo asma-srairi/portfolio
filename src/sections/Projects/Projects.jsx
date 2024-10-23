@@ -1,82 +1,80 @@
 import React, { useState } from 'react';
 import styles from './ProjectsStyles.module.css';
-import GameDev from '../../assets/ImgAsma/GameDevIcon.png';
-import EnvArt from '../../assets/ImgAsma/EnvIcon.png';
-import ConceptArt from '../../assets/ImgAsma/ConceptIcon.png';
-import DigitalArt from '../../assets/ImgAsma/DigitalArtIcon.png';
-import Drawing from '../../assets/ImgAsma/DrawingIcon.png';
-import hipsster from '../../assets/hipsster.png';
-import fitLift from '../../assets/fitlift.png';
 import ProjectCard from '../../common/ProjectCard';
 import Modal from '../../common/Modal';
-//VR
-import VR1 from '../../assets/ImgAsma/GameDev/VR8.png'
-import VR2 from '../../assets/ImgAsma/GameDev/VR3.png'
-import VR3 from '../../assets/ImgAsma/GameDev/VR5.png'
-import VR4 from '../../assets/ImgAsma/GameDev/VR7.png'
-import VR5 from '../../assets/ImgAsma/GameDev/VR12.png'
-import VR6 from '../../assets/ImgAsma/GameDev/VRGG.png'
-import VRvid from '../../assets/ImgAsma/GameDev/IndarVR.mp4'
-//got
-import got1 from '../../assets/ImgAsma/GameDev/got5.jpg'
-import got2 from '../../assets/ImgAsma/GameDev/got1.jpg'
-import got3 from '../../assets/ImgAsma/GameDev/got9.jpg'
-import got4 from '../../assets/ImgAsma/GameDev/got4.jpg'
-import got5 from '../../assets/ImgAsma/GameDev/got7.jpg'
-//ARFur
-import fur1 from '../../assets/ImgAsma/GameDev/fur1.jpg'
-import fur2 from '../../assets/ImgAsma/GameDev/fur2.jpg'
-import fur3 from '../../assets/ImgAsma/GameDev/fur5.jpg'
-import fur4 from '../../assets/ImgAsma/GameDev/fur3.jpg'
-//ENV
-import env1 from '../../assets/ImgAsma/EnvArt/env1.png'
-import env2 from '../../assets/ImgAsma/EnvArt/env2.png'
-import env3 from '../../assets/ImgAsma/EnvArt/ROOM1.png'
-import env4 from '../../assets/ImgAsma/EnvArt/ROOM2.png'
-import env5 from '../../assets/ImgAsma/EnvArt/env3.png'
-import env6 from '../../assets/ImgAsma/EnvArt/env4.png'
-import env7 from '../../assets/ImgAsma/EnvArt/ROOM3.png'
-import rpg1 from '../../assets/ImgAsma/EnvArt/rpg1.jpg'
-import rpg2 from '../../assets/ImgAsma/EnvArt/rpg3.jpg'
-import rpg3 from '../../assets/ImgAsma/EnvArt/rpg5.jpg'
-import rpg4 from '../../assets/ImgAsma/EnvArt/rpg8.jpg'
-import lava1 from '../../assets/ImgAsma/EnvArt/LAVATOWN.png'
-import lava2 from '../../assets/ImgAsma/EnvArt/LAVATOWN2.png'
-import lava3 from '../../assets/ImgAsma/EnvArt/LAVATOWN3.png'
-import lava4 from '../../assets/ImgAsma/EnvArt/LAVATOWN4.png'
-import ENVvid from '../../assets/ImgAsma/EnvArt/ENV2.mp4'
-import ENVvid2 from '../../assets/ImgAsma/EnvArt/inv11.mp4'
-
-//Concept
-import con1 from '../../assets/ImgAsma/ConceptArt/Ak1.png'
-import con2 from '../../assets/ImgAsma/ConceptArt/GLO1.png'
-import con3 from '../../assets/ImgAsma/ConceptArt/GA1.png'
-import con4 from '../../assets/ImgAsma/ConceptArt/D1.png'
-import con5 from '../../assets/ImgAsma/ConceptArt/AK11.png'
-import con6 from '../../assets/ImgAsma/ConceptArt/asmada2.png'
-
-//DigitalArt
-import da1 from '../../assets/ImgAsma/DigitalArt/asmada1.jpg'
-import da2 from '../../assets/ImgAsma/DigitalArt/asma2.png'
-import da3 from '../../assets/ImgAsma/DigitalArt/GOJU.jpg'
-import da4 from '../../assets/ImgAsma/DigitalArt/watercolor.jpg'
-
-//Drawings
-import dd1 from '../../assets/ImgAsma/Drawings/Realistic2.jpg'
-import dd2 from '../../assets/ImgAsma/Drawings/drawing4.jpg'
-import dd4 from '../../assets/ImgAsma/Drawings/drawing5.jpg'
-import dd5 from '../../assets/ImgAsma/Drawings/kkiki.jpg'
-import dd6 from '../../assets/ImgAsma/Drawings/drawing10.jpg'
-import dd7 from '../../assets/ImgAsma/Drawings/drawing11.jpg'
-import dd8 from '../../assets/ImgAsma/Drawings/drawing12.jpg'
-import dd9 from '../../assets/ImgAsma/Drawings/drawing1.jpg'
-import dd10 from '../../assets/ImgAsma/Drawings/drawing6.jpg'
-import dd11 from '../../assets/ImgAsma/Drawings/Realistic1.jpg'
-
-
-
 
 function Projects() {
+  const GameDev = '/assets/ImgAsma/GameDevIcon.png';
+  const EnvArt = '/assets/ImgAsma/EnvIcon.png';
+  const ConceptArt = '/assets/ImgAsma/ConceptIcon.png';
+  const DigitalArt = '/assets/ImgAsma/DigitalArtIcon.png';
+  const Drawing = '/assets/ImgAsma/DrawingIcon.png';
+  const hipsster = '/assets/hipsster.png';
+  const fitLift = '/assets/fitlift.png';
+
+  //VR
+  const VR1 = '/assets/ImgAsma/GameDev/VR8.png'
+  const VR2 = '/assets/ImgAsma/GameDev/VR3.png'
+  const VR3 = '/assets/ImgAsma/GameDev/VR5.png'
+  const VR4 = '/assets/ImgAsma/GameDev/VR7.png'
+  const VR5 = '/assets/ImgAsma/GameDev/VR12.png'
+  const VR6 = '/assets/ImgAsma/GameDev/VRGG.png'
+  const VRvid = '/assets/ImgAsma/GameDev/IndarVR.mp4'
+  //got
+  const got1 = '/assets/ImgAsma/GameDev/got5.jpg'
+  const got2 = '/assets/ImgAsma/GameDev/got1.jpg'
+  const got3 = '/assets/ImgAsma/GameDev/got9.jpg'
+  const got4 = '/assets/ImgAsma/GameDev/got4.jpg'
+  const got5 = '/assets/ImgAsma/GameDev/got7.jpg'
+  //ARFur
+  const fur1 = '/assets/ImgAsma/GameDev/fur1.jpg'
+  const fur2 = '/assets/ImgAsma/GameDev/fur2.jpg'
+  const fur3 = '/assets/ImgAsma/GameDev/fur5.jpg'
+  const fur4 = '/assets/ImgAsma/GameDev/fur3.jpg'
+  //ENV
+  const env1 = '/assets/ImgAsma/EnvArt/env1.png'
+  const env2 = '/assets/ImgAsma/EnvArt/env2.png'
+  const env3 = '/assets/ImgAsma/EnvArt/ROOM1.png'
+  const env4 = '/assets/ImgAsma/EnvArt/ROOM2.png'
+  const env5 = '/assets/ImgAsma/EnvArt/env3.png'
+  const env6 = '/assets/ImgAsma/EnvArt/env4.png'
+  const env7 = '/assets/ImgAsma/EnvArt/ROOM3.png'
+  const rpg1 = '/assets/ImgAsma/EnvArt/rpg1.jpg'
+  const rpg2 = '/assets/ImgAsma/EnvArt/rpg3.jpg'
+  const rpg3 = '/assets/ImgAsma/EnvArt/rpg5.jpg'
+  const rpg4 = '/assets/ImgAsma/EnvArt/rpg8.jpg'
+  const lava1 = '/assets/ImgAsma/EnvArt/LAVATOWN.png'
+  const lava2 = '/assets/ImgAsma/EnvArt/LAVATOWN2.png'
+  const lava3 = '/assets/ImgAsma/EnvArt/LAVATOWN3.png'
+  const lava4 = '/assets/ImgAsma/EnvArt/LAVATOWN4.png'
+  const ENVvid = '/assets/ImgAsma/EnvArt/ENV2.mp4'
+  const ENVvid2 = '/assets/ImgAsma/EnvArt/inv11.mp4'
+
+  //Concept
+  const con1 = '/assets/ImgAsma/ConceptArt/Ak1.png'
+  const con2 = '/assets/ImgAsma/ConceptArt/GLO1.png'
+  const con3 = '/assets/ImgAsma/ConceptArt/GA1.png'
+  const con4 = '/assets/ImgAsma/ConceptArt/D1.png'
+  const con5 = '/assets/ImgAsma/ConceptArt/AK11.png'
+  const con6 = '/assets/ImgAsma/ConceptArt/asmada2.png'
+
+  //DigitalArt
+  const da1 = '/assets/ImgAsma/DigitalArt/asmada1.jpg'
+  const da2 = '/assets/ImgAsma/DigitalArt/asma2.png'
+  const da3 = '/assets/ImgAsma/DigitalArt/GOJU.jpg'
+  const da4 = '/assets/ImgAsma/DigitalArt/watercolor.jpg'
+
+  //Drawings
+  const dd1 = '/assets/ImgAsma/Drawings/Realistic2.jpg'
+  const dd2 = '/assets/ImgAsma/Drawings/drawing4.jpg'
+  const dd4 = '/assets/ImgAsma/Drawings/drawing5.jpg'
+  const dd5 = '/assets/ImgAsma/Drawings/kkiki.jpg'
+  const dd6 = '/assets/ImgAsma/Drawings/drawing10.jpg'
+  const dd7 = '/assets/ImgAsma/Drawings/drawing11.jpg'
+  const dd8 = '/assets/ImgAsma/Drawings/drawing12.jpg'
+  const dd9 = '/assets/ImgAsma/Drawings/drawing1.jpg'
+  const dd10 = '/assets/ImgAsma/Drawings/drawing6.jpg'
+  const dd11 = '/assets/ImgAsma/Drawings/Realistic1.jpg'
   const [isModalOpen, setModalOpen] = useState(false);
   const [modalSections, setModalSections] = useState([]);
 
@@ -111,7 +109,7 @@ function Projects() {
             'Backend Development (NodeJS, MongoDB)',
             'Deployment and Version Control(GitHub, Vercel)',
 
-          ], images: [VR1, VR2, VR6, VR4, VR5,VR3],
+          ], images: [VR1, VR2, VR6, VR4, VR5, VR3],
           videoSrc: VRvid,
         },
         {
@@ -206,7 +204,7 @@ function Projects() {
         {
           title: 'Spectre Divide Character Design',
           description: ['Combining environment realism with anime battle character',
-             'Digital drawing', 'shading',
+            'Digital drawing', 'shading',
           ],
           images: [con6],
           videoSrc: null,
@@ -226,7 +224,7 @@ function Projects() {
           title: 'Digital Drawing',
           description: ['These series of my digital drawings/painting focusing on details portraits, shading, and realism',
           ],
-          images: [da1, da2,da3,da4],
+          images: [da1, da2, da3, da4],
           videoSrc: null,
         },
       ],
@@ -244,7 +242,7 @@ function Projects() {
           title: 'Drawing',
           description: ['These series of my drawings from childhoom until now, showcasing my artistic masterpieces',
           ],
-          images: [dd1, dd2,dd4,dd5,dd6,dd7,dd8,dd9,dd10,dd11],
+          images: [dd1, dd2, dd4, dd5, dd6, dd7, dd8, dd9, dd10, dd11],
           videoSrc: null,
         },
       ],

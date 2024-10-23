@@ -1,17 +1,19 @@
 import styles from './HeroStyles.module.css';
-import heroImg from '../../assets/ImgAsma/AsmaHero.png';
-import sun from '../../assets/sun.svg';
-import moon from '../../assets/moon.svg';
-import InstagramLight from '../../assets/InstagramLight.svg';
-import InstagramDark from '../../assets/InstagramDark.svg';
-import facebookLight from '../../assets/Facebook-light.svg';
-import facebookDark from '../../assets/Facebook-dark.svg';
-import linkedinLight from '../../assets/linkedin-light.svg';
-import linkedinDark from '../../assets/linkedin-dark.svg';
+
+
 import { useTheme } from '../../common/ThemeContext';
 
 function Hero() {
   const { theme, toggleTheme } = useTheme();
+  const heroImg = '/assets/ImgAsma/AsmaHero.png';
+  const sun = '/assets/sun.svg';
+  const moon = '/assets/moon.svg';
+  const InstagramLight = '/assets/InstagramLight.svg';
+  const InstagramDark = '/assets/InstagramDark.svg';
+  const facebookLight = '/assets/Facebook-light.svg';
+  const facebookDark = '/assets/Facebook-dark.svg';
+  const linkedinLight = '/assets/linkedin-light.svg';
+  const linkedinDark = '/assets/linkedin-dark.svg';
   const CV = new URL('../../assets/ImgAsma/AsmaSrairi_resume.pdf', import.meta.url).href;
 
   const themeIcon = theme === 'light' ? sun : moon;
@@ -39,7 +41,7 @@ function Hero() {
           Asma Srairi
         </h1>
         <h2>Software Engineer
-        <br />Concept & Environment Artist | Storyboarder
+          <br />Concept & Environment Artist | Storyboarder
         </h2>
         <span>
           <a href="https://twitter.com/" target="_blank">
@@ -53,7 +55,7 @@ function Hero() {
           </a>
         </span>
         <p>
-        I’m a Tunisian game developer <br />combining technical and artistic skills<br /> to create immersive, engaging experiences.
+          I’m a Tunisian game developer <br />combining technical and artistic skills<br /> to create immersive, engaging experiences.
         </p>
         <a href={CV} download>
           <button className="hover">Resume</button>
