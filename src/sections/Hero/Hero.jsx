@@ -8,11 +8,11 @@ import facebookLight from '../../assets/Facebook-light.svg';
 import facebookDark from '../../assets/Facebook-dark.svg';
 import linkedinLight from '../../assets/linkedin-light.svg';
 import linkedinDark from '../../assets/linkedin-dark.svg';
-import CV from '../../assets/ImgAsma/AsmaSrairi_resume.pdf';
 import { useTheme } from '../../common/ThemeContext';
 
 function Hero() {
   const { theme, toggleTheme } = useTheme();
+  const CV = new URL('../../assets/ImgAsma/AsmaSrairi_resume.pdf', import.meta.url).href;
 
   const themeIcon = theme === 'light' ? sun : moon;
   const InstagramIcon = theme === 'light' ? InstagramLight : InstagramDark;
