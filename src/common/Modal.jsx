@@ -1,39 +1,45 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
+import React, { useEffect } from 'react';
 import styles from './Modal.module.css'; // Import the updated modal styles
 
 function Modal({ isOpen, onClose, sections }) {
-  if (!isOpen) return null;
+  // Close the modal when the ESC key is pressed
+  useEffect(() => {
+    if (!isOpen) return;
 
-  const responsive = {
-    superLargeDesktop: {
-      breakpoint: { max: 4000, min: 3000 },
-      items: 3,
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 2,
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 1,
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-    },
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        onClose();
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    // Prevent body scrolling when modal is open
+    document.body.style.overflow = 'hidden';
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = 'auto'; // Restore scrolling
+    };
+  }, [isOpen, onClose]);
+
+  // Close the modal when clicking outside the modal content
+  const handleOverlayClick = (e) => {
+    if (e.target === e.currentTarget) {
+      onClose();
+    }
   };
 
+  if (!isOpen) return null;
+
   return (
-    <div className={styles.modalOverlay}>
+    <div className={styles.modalOverlay} onClick={handleOverlayClick}>
       <div className={styles.modalContent}>
         <button className={styles.closeButton} onClick={onClose}>
           &times;
         </button>
 
-        {/* Loop through each section to render multiple carousels, titles, descriptions, and videos */}
+        {/* Loop through each section to render titles, descriptions, images, and videos */}
         {sections.map((section, index) => (
           <div key={index} className={styles.section}>
             <h2 className={styles.modalTitle}>{section.title}</h2>
@@ -43,14 +49,17 @@ function Modal({ isOpen, onClose, sections }) {
               ))}
             </ul>
 
-            {/* Horizontal carousel for images */}
-            <Carousel responsive={responsive} className={styles.carousel}>
+            {/* Render images vertically */}
+            <div className={styles.imageContainer}>
               {section.images.map((img, imgIndex) => (
-                <div key={imgIndex} className={styles.carouselItem}>
-                  <img src={img} alt={`carousel-${index}-${imgIndex}`} />
-                </div>
+                <img
+                  key={imgIndex}
+                  src={img}
+                  alt={`image-${index}-${imgIndex}`}
+                  className={styles.image}
+                />
               ))}
-            </Carousel>
+            </div>
 
             {/* Render video if available */}
             {section.videoSrc && (

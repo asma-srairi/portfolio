@@ -53,41 +53,29 @@
   font-size: 16px;
   color: var(--text-color); /* Use theme variable for text color */
   margin-bottom: 20px;
-  padding-left: 20px; 
+  padding-left: 20px;
 }
 
-.carousel::-webkit-scrollbar {
-  display: none; /* Hides scrollbar */
+/* Image Container */
+.imageContainer {
+  display: flex;
+  flex-direction: column; /* Display images vertically */
+  gap: 10px; /* Add space between images */
+  align-items: center; /* Center images horizontally */
 }
-/* Horizontal Carousel */
-.carousel {
+
+/* Image Styles */
+.imageContainer img {
   width: 100%;
-  display: flex;
-  overflow-x: auto; /* Allow horizontal scrolling */
-  padding: 10px 0; /* Add some vertical padding */
-}
-
-/* Carousel Item */
-.carouselItem {
-  margin: 20px;
-  display: flex;
-  justify-content: center;
-  flex-shrink: 0; /* Prevent shrinking */
-}
-
-/* Carousel Item Image */
-.carouselItem img {
-  width: 100%; /* Make image responsive */
-  max-width: 500px; /* Set a max width for larger screens */
-  height: 350px; /* Maintain aspect ratio */
-  object-fit: cover; /* Ensure the image covers the area */
-  border-radius: 30px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  max-width: 700px; /* Set a max width for larger screens */
+  max-height: 800px; /* Set a max height for images */
+  object-fit: contain; /* Ensure the full image is visible without cropping */
+  border-radius: 10px;
   transition: transform 0.3s ease;
 }
 
 /* Hover Effect for Images */
-.carouselItem img:hover {
+.imageContainer img:hover {
   transform: scale(1.05); /* Add a slight hover effect */
 }
 
@@ -114,9 +102,9 @@
     font-size: 14px; /* Smaller description on mobile */
   }
 
-  .carouselItem img {
+  .imageContainer img {
     max-width: 100%; /* Full width for mobile */
-    
+    max-height: 400px; /* Adjust max height for mobile */
   }
 
   .closeButton {
@@ -139,5 +127,9 @@
 
   .closeButton {
     font-size: 18px; /* Smaller close button */
+  }
+
+  .imageContainer img {
+    max-height: 300px; /* Adjust max height for very small screens */
   }
 }
