@@ -49,6 +49,10 @@ function Projects() {
   const lava4 = '/assets/ImgAsma/EnvArt/LAVATOWN4.png'
   const ENVvid = '/assets/ImgAsma/EnvArt/ENV2.mp4'
   const ENVvid2 = '/assets/ImgAsma/EnvArt/inv11.mp4'
+  const cs1 = '/assets/ImgAsma/EnvArt/CSMIRAGE.png'
+  const cs2 = '/assets/ImgAsma/EnvArt/SITE.png'
+  const cS3 = '/assets/ImgAsma/EnvArt/PALACE.png'
+  const cs4 = '/assets/ImgAsma/EnvArt/RAMP.png'
 
   //Concept
   const con1 = '/assets/ImgAsma/ConceptArt/AK1.png'
@@ -57,6 +61,7 @@ function Projects() {
   const con4 = '/assets/ImgAsma/ConceptArt/D1.png'
   const con5 = '/assets/ImgAsma/ConceptArt/AK11.png'
   const con6 = '/assets/ImgAsma/ConceptArt/asmada2.png'
+   const con7 = '/assets/ImgAsma/ConceptArt/charcter22.jpg'
 
   //DigitalArt
   const da1 = '/assets/ImgAsma/DigitalArt/asmada1.jpg'
@@ -172,6 +177,17 @@ function Projects() {
           videoSrc: ENVvid,
         },
         {
+          title: 'Stylized Counter Strike A site (Mirage Map)',
+          description: ['Since I am a big fan of the game, I recreated the famous A site of the map Mirage in Stylized fun way!',
+            'Post-Processing Effects',
+            'Dynamic / Static Lighting',
+            'High-Quality Lava Textures',
+            'Stylized Assests'
+          ],
+          images: [cs1, cs2, cS3, cs4],
+          videoSrc: null,
+        },
+        {
           title: 'Stylized Lava Town',
           description: ['Design of a vibrant lava town features whimsical architecture made of volcanic rock',
             'Post-Processing Effects',
@@ -194,19 +210,27 @@ function Projects() {
       ),
       sections: [
         {
-          title: 'Counter Strike 2 Skin creation (Workshop)',
-          description: ['Creation of unique skins for CS2 that reflects my passion for the game and its vibrant community',
-            'UV editing', '3D design', 'Digital drawing', 'Texture mapping',
+          title: 'Character Design (Combination Concept)',
+          description: ['Desiging combined characters from animes, movies, TV Shows and video games, a personnal fun project! ',
+             'Sketching','2D design', 'Digital drawing',
           ],
-          images: [con1, con2, con3, con4, con5],
+          images: [con7],
           videoSrc: null,
         },
         {
           title: 'Spectre Divide Character Design',
           description: ['Combining environment realism with anime battle character',
-            'Digital drawing', 'shading',
+            'Digital drawing', 'shading', '2D Design',
           ],
           images: [con6],
+          videoSrc: null,
+        },
+        {
+          title: 'Counter Strike 2 Skin creation (Workshop)',
+          description: ['Creation of unique skins for CS2 that reflects my passion for the game and its vibrant community',
+            'UV editing', '3D design', 'Digital drawing', 'Texture mapping',
+          ],
+          images: [con1, con2, con3, con4, con5],
           videoSrc: null,
         },
       ],

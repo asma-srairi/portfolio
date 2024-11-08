@@ -40,8 +40,8 @@ function Hero() {
         <h1>
           Asma Srairi
         </h1>
-        <h2>Software Engineer
-          <br />Concept & Environment Artist | Storyboarder
+        <h2>Software Engineer &
+          <br />Game Concept Artist
         </h2>
         <span>
           <a href="https://twitter.com/" target="_blank">
