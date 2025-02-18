@@ -61,7 +61,10 @@ function Projects() {
   const con4 = '/assets/ImgAsma/ConceptArt/D1.png'
   const con5 = '/assets/ImgAsma/ConceptArt/AK11.png'
   const con6 = '/assets/ImgAsma/ConceptArt/asmada2.png'
-   const con7 = '/assets/ImgAsma/ConceptArt/charcter22.jpg'
+  const con7 = '/assets/ImgAsma/ConceptArt/charcter22.jpg'
+  const con8 = '/assets/ImgAsma/ConceptArt/character designAstra3.jpg'
+  const con9 = '/assets/ImgAsma/ConceptArt/sandBladeDesign1.jpg'
+  const con10 = '/assets/ImgAsma/ConceptArt/stariumCapsuleHero.jpg'
 
   //DigitalArt
   const da1 = '/assets/ImgAsma/DigitalArt/asmada1.jpg'
@@ -226,6 +229,22 @@ function Projects() {
           videoSrc: null,
         },
         {
+          title: 'Character Design (Valorant Agent)',
+          description: ['Desiging a Gen Z (more casual) version of my favorite valorant agent _Astra_ ',
+             'Sketching','2D design', 'Digital drawing',
+          ],
+          images: [con8],
+          videoSrc: null,
+        },
+        {
+          title: 'Character Creation (New Valorant Agent)',
+          description: ['Creating a brand new valorant agent bases on sand abilities !!  ',
+             'Sketching','2D design', 'Digital drawing',
+          ],
+          images: [con9],
+          videoSrc: null,
+        },
+        {
           title: 'Counter Strike 2 Skin creation (Workshop)',
           description: ['Creation of unique skins for CS2 that reflects my passion for the game and its vibrant community',
             'UV editing', '3D design', 'Digital drawing', 'Texture mapping',
@@ -233,6 +252,7 @@ function Projects() {
           images: [con1, con2, con3, con4, con5],
           videoSrc: null,
         },
+       
       ],
     },
     {
